@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<link rel="stylesheet" type="text/css" href="weui.css">
+
+	<script type="text/javascript"> 
+
+
+    function getCanvas(id) {
+        return document.getElementById(id);
+    }
+    
+    function pageLoad() {
+        var theCanvas = getCanvas('container');
+        var textBlock = theCanvas.getContext('2d');
+        textBlock.font = 'bold 100px Yuanti SC';
+        textBlock.fillStyle = '#000000';
+        textBlock.fillText('重启试试。', theCanvas.width*0.2,100);
+    }
+
+    function convertCanvasToImage(canvas) {
+		var image = new Image();
+		image.src = canvas.toDataURL("image/png");
+		return image;
+	}
+	
+	window.onload = function () {
+	 	
+	 	document.getElementById('btn').onclick = function () {
+	 		
+	 		var imgCanvas = convertCanvasToImage(container);
+
+			var stickerImageBlock = document.getElementById('stickerImageBlock');
+
+			var stickerImageBlockImg = document.createElement('img');
+
+			stickerImageBlockImg.src = imgCanvas.src;
+
+			stickerImageBlock.appendChild(stickerImageBlockImg);
+
+		};
+	};
+
+	</script>
+
+	<body onload="pageLoad();">
+		
+		<p align="center">
+			<canvas id="container" width="640" height="200" style="background-color:#ebebeb"></canvas>
+		</p>
+		
+		<div>
+			<a id="btn" href="javascript:;" class="weui-btn weui-btn_default" >生成贴纸</a>
+		
+		</div>
+			<div id="stickerImageBlock">
+		</div>
+
+	</body>
+
+</html>
