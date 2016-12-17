@@ -1,8 +1,18 @@
-.btn {
+
+#btn {
   text-align:center;
   border:2px solid #a1a1a1;
   padding:10px 40px; 
   background:#dddddd;
   width:350px;
   border-radius:25px;
+}
+
+#stickerText {
+  width: 100%;
+  border: 1;
+  outline: 0;
+  background-color: #FFFFFF;
+  color: #354920;
+  height: 300;
 }
