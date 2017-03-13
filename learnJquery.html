@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jQuery-3.1.1.js"></script>
+<script src="gif.js"></script>
+<script>
+	$(document).ready(function(){
+		$("div").click(function(){
+			$(this).hide();
+			});
+
+
+		$("#button").click(function(){
+			$("#p1").hide();
+			})
+
+		});
+
+	// 从canvas拿内容渲染成gif
+	var gif = new GIF({
+		workers: 2,
+		quality: 10
+		});
+
+	// or a canvas element
+	gif.addFrame(canvasElement, {delay: 200});
+
+	// or copy the pixels from a canvas context
+	// gif.addFrame(ctx, {copy: true});
+
+	gif.on('finished', function(blob) {
+		window.open(URL.createObjectURL(blob));
+		});
+
+	gif.render();
+
+</script>
+</head>
+<body>
+<p id="p1">这是第一段。</p>
+<div id="div1">这是第一个div，点击我消失</div>
+<p id="p2">这是第二段</p>
+
+<button id="button">点击使第一段消失</button>
+</body>
+</html>

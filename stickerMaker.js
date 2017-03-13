@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<title>文字表情制作器</title>
-
-	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
-	<link rel="stylesheet" type="text/css" href="weui2.css">
-	<script src="gif.js"></script>
-	<script src="gif.worker.js"></script>
-	<script src="stickerMaker.js"></script>
-	<script type="text/javascript">
-
-	// 在画布上绘制背景图片
+// 在画布上绘制背景图片
 	var c2=document.getElementById("stickerWord");
 	var cxt2=c2.getContext("2d");
 	var img2 = new Image();
@@ -92,38 +81,3 @@
 	function testAlertFunc () {
 		alert("hello");
 	}
-
-	</script>
-
-	<body>
-		
-		<div align="center" id="container">
-				<canvas id="stickerWord" width="640" height="180" ></canvas>
-		</div>
-
-	</br>
-
-		<div id="stickerPreview">
-			<div id="inputBoxContainer">
-				<input class="input" type="text" id="inputBox" placeholder="请输入文字" value = "呵。" onkeyup="changeWidth();">
-			</div>
-		</div>
-
-	</br>
-
-		<div align = "center" id="btn" onclick="generateImg();" class="weui-btn weui-btn_default">
-			生成贴纸
-		</div>
-	
-	</br>
-
-		<div align = "center" id="stickerImageBlock">
-			<p style="display: none" id="useInstruction">
-				长按下面图片保存到手机，再添加到微信自定义表情
-			</p>
-			<img src="" id="0">
-		</div>
-
-	</body>
-
-</html>
