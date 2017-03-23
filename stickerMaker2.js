@@ -12,7 +12,7 @@ function generateSticker () {
     textSize.innerHTML = theText;
 
     // 确定画布尺寸
-    theCanvas.width = 100+textSize.clientWidth;
+    theCanvas.width = 50+textSize.clientWidth;
     theCanvas.height = 120;
 
     var textBlock = theCanvas.getContext("2d");
@@ -20,15 +20,15 @@ function generateSticker () {
     // 绘制圆角矩形背景
     textBlock.fillStyle="#000000";  //背景色
     textBlock.fillRect(0,0,theCanvas.width, theCanvas.height);
-    fillRoundRect(textBlock, 0, 0, theCanvas.width, 120, 60, "#FFFFFF");
+    fillRoundRect(textBlock, 0, 0, theCanvas.width, 60, 30, "#FFFFFF");
     
     // 组合方式
     textBlock.globalCompositeOperation = "source-over";
     
     // 写文字
-    textBlock.font = "54px Yuanti SC";
+    textBlock.font = "32px Pingfang";
     textBlock.fillStyle = '#010101';
-    textBlock.fillText(theText, 50, 75);
+    textBlock.fillText(theText, 25, 40);
 
     // canvas直接转gif
     var encoder = new GIFEncoder();
