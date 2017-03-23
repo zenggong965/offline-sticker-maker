@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<title>文字表情制作器</title>
+
+	<!-- <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" content="text/html; charset=utf-8"> -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="weui2.css">
+	
+	<script src="stickerMaker2.js"></script>
+	<script src="LZWEncoder.js"></script>
+	<script src="NeuQuant.js"></script>
+	<script src="GIFEncoder.js"></script>
+	<script src="b64.js"></script>
+
+
+	<body>
+
+	<img id="stickerBg" src="stickerBg2.png" hidden>
+
+	</br>
+	
+	<div id="inputWrap" align="center">
+		<input class="inputText" type="text" id="inputBox" placeholder="输入≤10个字" value = "互相伤害">
+	</div>
+	
+	</br>
+
+	<div align = "center" id="btn" onclick="generateSticker();" class="weui-btn weui-btn_default">生成贴纸</div>
+
+	</br>
+
+	<div align = "center" id="stickerImageBlock">
+		<p style="display: none" id="useInstruction">长按图片发送给朋友</p>
+		<img id="gifImg">
+	</div>
+
+	<div align="center">
+		<canvas style="display: block" id="stickerWord"></canvas>
+	</div>
+
+	<div>
+		<p id="getTextSize">获取文字尺寸</p>
+	</div>
+
+	</body>
+
+</html>
