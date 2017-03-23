@@ -11,22 +11,20 @@ body {
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color: #D8D8D8;
-    padding-bottom: 6px;
+  color: #D8D8D8;
+  padding-bottom: 26px;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color: #909;
-   opacity:  1;
-   padding-bottom: 6px;
+  color: #D8D8D8;
+  padding-bottom: 6px;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color: #909;
-   opacity:  1;
-   padding-bottom: 6px;
+  color: #D8D8D8;
+  padding-bottom: 6px;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: #909;
-   padding-bottom: 6px;
+  color: #D8D8D8;
+  padding-bottom: 6px;
 }
 
 #container {
