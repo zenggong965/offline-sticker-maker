@@ -1,3 +1,11 @@
+@font-face {
+  font-family: <YourWebFontName>;
+  src: <source> [<format>][,<source> [<format>]]*;
+/*  [font-weight: <weight>];
+  [font-style: <style>];*/
+}
+
+
 body {
   background-color: #C9C9C9;
 }

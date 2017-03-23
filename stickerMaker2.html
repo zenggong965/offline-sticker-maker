@@ -2,7 +2,7 @@
 <html>
 	<title>文字表情制作器</title>
 
-	<!-- <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" content="text/html; charset=utf-8"> -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" type="text/css" href="weui2.css">
 	
@@ -20,7 +20,7 @@
 	</br>
 	
 	<div id="inputWrap" align="center">
-		<input class="inputText" type="text" id="inputBox" placeholder="输入≤10个字" value = "互相伤害">
+		<input class="inputText" type="text" id="inputBox" placeholder="输入≤10个字" value = "">
 	</div>
 	
 	</br>
@@ -34,8 +34,8 @@
 		<img id="gifImg">
 	</div>
 
-	<div align="center">
-		<canvas style="display: block" id="stickerWord"></canvas>
+	<div id="canvasDiv" align="center">
+		<canvas style="display: none" id="stickerWord"></canvas>
 	</div>
 
 	<div>

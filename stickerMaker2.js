@@ -18,8 +18,8 @@ function generateSticker () {
     var textBlock = theCanvas.getContext("2d");
     
     // 绘制圆角矩形背景
-    // textBlock.fillStyle="#000000";
-    // textBlock.fillRect(0,0,theCanvas.width, theCanvas.height);
+    textBlock.fillStyle="#000000";  //背景色
+    textBlock.fillRect(0,0,theCanvas.width, theCanvas.height);
     fillRoundRect(textBlock, 0, 0, theCanvas.width, 120, 60, "#FFFFFF");
     
     // 组合方式
@@ -27,20 +27,20 @@ function generateSticker () {
     
     // 写文字
     textBlock.font = "54px Yuanti SC";
-    textBlock.fillStyle = '#000000';
+    textBlock.fillStyle = '#010101';
     textBlock.fillText(theText, 50, 75);
 
     // canvas直接转gif
     var encoder = new GIFEncoder();
     encoder.start();
+    encoder.setTransparent(0x0000000);   //抠掉的颜色
     encoder.addFrame(textBlock);
-    encoder.setTransparent(0x000000);
+
     encoder.finish();
 
     document.getElementById('gifImg').src = 'data:image/gif;base64,'+encode64(encoder.stream().getData())
 
     document.getElementById("useInstruction").style.display = "block";
-
 
 }
 
