@@ -40,7 +40,12 @@ function generateSticker () {
 
     document.getElementById('gifImg').src = 'data:image/gif;base64,'+encode64(encoder.stream().getData())
 
-    document.getElementById("useInstruction").style.display = "block";
+    if (theText != "")
+        {document.getElementById("useInstruction").style.display = "block";}
+    else
+        {document.getElementById("useInstruction").style.display = "none";}
+
+    
 
 }
 
