@@ -50,7 +50,7 @@ function generateSticker () {
 
 function cleanInput () {
     document.getElementById("inputBox").value = "";
-    // document.getElementById("inputBox").focus();
+    document.getElementById("inputBox").focus();
 }
 
 
