@@ -46,9 +46,12 @@ function generateSticker () {
         {document.getElementById("useInstruction").style.display = "none";}
 
     
-
 }
 
+function cleanInput () {
+    document.getElementById("inputBox").value = "";
+    // document.getElementById("inputBox").focus();
+}
 
 
 function fillRoundRect(cxt,x,y,width,height,radius,/*optional*/fillColor){  
