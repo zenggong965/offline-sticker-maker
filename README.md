@@ -12,4 +12,6 @@ idea 源自离线杂志 the-offline.com
 </br>
 可以在微信里作为表情发送
 </br>
-请在微信里打开 https://kayzeng.github.io/offline-sticker-maker/stickerMaker2.html
+如果把这个项目设为github page，在微信里打开下面这个链接就可以用
+</br>
+https://kayzeng.github.io/offline-sticker-maker/stickerMaker2.html
